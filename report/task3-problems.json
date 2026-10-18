@@ -1,0 +1,66 @@
+[
+  {
+    "lines": "3–4",
+    "original": "<input type=\"text\" placeholder=\"Your name\">; <input type=\"text\" placeholder=\"Email\">",
+    "problem": "Имя и email теряют подпись при вводе.",
+    "fix": "Добавлены label и совпадающие for/id.",
+    "alternative": "Можно вложить каждый input внутрь своего label и получить неявную связь без for.",
+    "rationale": "Выбрана явная связь for/id: подпись и поле можно независимо размещать в сетке Bootstrap, сохраняя доступное имя и переход к полю по нажатию на подпись."
+  },
+  {
+    "lines": "3–10, 14, 18–19",
+    "original": "Текстовые поля, select, textarea и checkbox не имеют name.",
+    "problem": "Без name введённые данные не отправляются.",
+    "fix": "Всем полям добавлен name."
+  },
+  {
+    "lines": "4",
+    "original": "<input type=\"text\" placeholder=\"Email\">",
+    "problem": "type=text принимает неверный email.",
+    "fix": "Использован type=email."
+  },
+  {
+    "lines": "5–6",
+    "original": "<label>Phone</label>; <input type=\"text\" id=\"phone\">",
+    "problem": "Нажатие на Phone не переводит фокус в поле.",
+    "fix": "Добавлен for=guest-phone и такой же id."
+  },
+  {
+    "lines": "7–8",
+    "original": "<label for=\"guests\">Guests</label>; <input type=\"text\" id=\"people\">",
+    "problem": "Нажатие на Guests не переводит фокус в поле.",
+    "fix": "У поля и подписи используется guests."
+  },
+  {
+    "lines": "8",
+    "original": "<input type=\"text\" id=\"people\">",
+    "problem": "Число гостей можно ввести буквами или дробью.",
+    "fix": "type=number, min=1, step=1."
+  },
+  {
+    "lines": "10",
+    "original": "<input type=\"text\" id=\"date\" placeholder=\"dd/mm/yyyy\">",
+    "problem": "Текстовое поле не проверяет дату.",
+    "fix": "Использован type=date."
+  },
+  {
+    "lines": "10, 12",
+    "original": "id=\"date\" одновременно у поля даты и radio Inside.",
+    "problem": "Повторяющийся id делает связь подписей с полями неоднозначной.",
+    "fix": "У даты и radio теперь разные id."
+  },
+  {
+    "lines": "12–13",
+    "original": "name=\"inside\" и name=\"terrace\" у двух radio.",
+    "problem": "Inside и Terrace можно выбрать одновременно.",
+    "fix": "Общий name=seating, разные value; группа fieldset.",
+    "alternative": "Можно заменить два radio одним select с вариантами Inside и Terrace.",
+    "rationale": "Оставлены radio: оба варианта сразу видны, исходный тип элемента сохранён, а выбор возможен клавишами со стрелками."
+  },
+  {
+    "lines": "20",
+    "original": "<div class=\"btn btn-primary\">Reserve</div>",
+    "problem": "div не отправляет форму и не работает как кнопка с клавиатуры.",
+    "fix": "Использован button type=submit."
+  }
+]

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a train ticket</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page train-page">
+  <main class="container page-shell py-4 py-md-5">
+    <nav class="page-nav" aria-label="Page navigation">
+      <a class="brand" href="index.html">railway<span>.</span></a>
+      <a href="index.html">All assignments <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="ticket">
+      <header class="ticket-header">
+        <p class="eyebrow">A NEW JOURNEY</p>
+        <h1>Book a train ticket</h1>
+        <p class="heading-note">Choose your route and make yourself comfortable.</p>
+      </header>
+      <form class="ticket-form" action="/submit" method="post">
+        <!-- Two radio inputs form one trip choice. -->
+        <fieldset class="mb-4">
+          <legend class="visually-hidden">Trip type</legend>
+          <div class="btn-group trip-toggle">
+            <input class="btn-check" type="radio" id="one-way" name="trip" value="one-way" required>
+            <label class="btn" for="one-way">One way</label>
+            <input class="btn-check" type="radio" id="round-trip" name="trip" value="round-trip" required>
+            <label class="btn" for="round-trip">Round trip</label>
+          </div>
+        </fieldset>
+
+        <h2 class="section-title">Route &amp; dates</h2>
+        <!-- Bootstrap columns stack on phones. -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <div class="form-floating route-field">
+              <input class="form-control" type="text" id="from" name="from" placeholder="Astana" required>
+              <label for="from">From</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating route-field">
+              <input class="form-control" type="text" id="to" name="to" placeholder="Almaty" required>
+              <label for="to">To</label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label" for="departure">Departure</label>
+            <input class="form-control" type="date" id="departure" name="departure" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label" for="return">Return</label>
+            <input class="form-control" type="date" id="return" name="return">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label" for="passengers">Passengers</label>
+            <select class="form-select" id="passengers" name="passengers" required>
+              <option value="">Choose adults</option>
+              <option value="1">1 adult</option>
+              <option value="2">2 adults</option>
+              <option value="3">3 adults</option>
+              <option value="4">4 adults</option>
+              <option value="5">5 adults</option>
+              <option value="6">6 adults</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="mb-4 carriage-choices">
+          <legend class="form-label">Carriage class</legend>
+          <div class="form-check form-check-inline choice-option">
+            <input class="form-check-input" type="radio" id="seat" name="carriage" value="seat" required>
+            <label class="form-check-label" for="seat">Seat</label>
+          </div>
+          <div class="form-check form-check-inline choice-option">
+            <input class="form-check-input" type="radio" id="coupe" name="carriage" value="coupe" required>
+            <label class="form-check-label" for="coupe">Coupé</label>
+          </div>
+          <div class="form-check form-check-inline choice-option">
+            <input class="form-check-input" type="radio" id="sleeper" name="carriage" value="sleeper" required>
+            <label class="form-check-label" for="sleeper">Sleeper</label>
+          </div>
+        </fieldset>
+
+        <h2 class="section-title section-divider">Contact details</h2>
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <label class="form-label" for="phone">Phone</label>
+            <div class="input-group">
+              <span class="input-group-text" id="phone-code">+7</span>
+              <input class="form-control" type="tel" id="phone" name="phone" placeholder="701 234 56 78" autocomplete="tel" aria-describedby="phone-code" required>
+            </div>
+            <input type="hidden" name="phone_country_code" value="+7">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form-check form-switch mb-2">
+          <input class="form-check-input" type="checkbox" role="switch" id="sms" name="sms" value="yes">
+          <label class="form-check-label" for="sms">Also send the ticket by SMS</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="agreement" name="agreement" value="accepted" required>
+          <label class="form-check-label" for="agreement">I agree with the carriage rules</label>
+        </div>
+        <!-- On phones flex-column-reverse puts Find trains above Clear. -->
+        <div class="form-actions d-flex flex-column-reverse flex-md-row justify-content-md-end gap-2">
+          <button class="btn btn-outline-secondary px-4" type="reset">Clear</button>
+          <button class="btn btn-primary btn-find px-4" type="submit">Find trains</button>
+        </div>
+      </form>
+    </div>
+    <p class="page-footer">Assignment 4 · Zhumazhan Miras · IT-2512</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@font-face {
+  font-family: Montserrat;
+  src: url('assets/fonts/Montserrat.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Shared palette: navy text, lavender accents and a light background. */
+:root {
+  --ink: #252c48;
+  --muted: #697087;
+  --accent: #6554c0;
+  --accent-dark: #5140a4;
+  --soft: #f0edf9;
+  --line: #e0e2ec;
+}
+.app-page { background: #f6f5fa; color: var(--ink); font-family: Montserrat, sans-serif; font-size: 14px; }
+.page-shell { max-width: 1040px; }
+a { color: var(--accent); text-underline-offset: 4px; }
+.page-nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 26px; font-size: 12px; }
+.page-nav a { text-decoration: none; color: var(--muted); }
+.page-nav a:hover { color: var(--accent); }
+.page-nav .brand { color: var(--ink); font-size: 23px; font-weight: 750; letter-spacing: -1px; }
+.brand span { color: var(--accent); }
+.eyebrow { color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px; }
+h1 { font-size: clamp(25px, 3.2vw, 34px); font-weight: 700; letter-spacing: -1px; margin-bottom: 10px; }
+.page-heading { margin-bottom: 26px; }
+.page-heading > p:last-child, .heading-note { color: var(--muted); line-height: 1.7; margin-bottom: 0; }
+.page-footer { margin: 20px 0 0; color: var(--muted); text-align: center; font-size: 11px; }
+
+/* One card and one set of controls for all three forms. */
+.ticket, .form-panel { border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 12px 36px #252c4808; }
+.ticket { overflow: hidden; }
+.ticket-header { padding: 30px 36px 26px; border-bottom: 1px solid var(--line); background: linear-gradient(110deg, #fff, #f7f5fc); }
+.ticket-form, .form-panel { padding: 30px 36px; }
+.form-label { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+legend.form-label { float: none; width: auto; }
+.form-control, .form-select { min-height: 44px; border-color: var(--line); border-radius: 10px; background-color: #fcfcfe; color: var(--ink); font-size: 14px; padding: 10px 13px; }
+.form-control::placeholder { color: #777e91; opacity: 1; }
+.form-control:focus, .form-select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #6554c016; background: #fff; }
+.form-text { color: var(--muted); font-size: 11px; line-height: 1.6; }
+.form-check-input { border-color: #b9bdce; }
+.form-check-input:checked { background-color: var(--accent); border-color: var(--accent); }
+.form-check-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #6554c020; }
+.form-check-label { cursor: pointer; }
+.section-title { font-size: 14px; font-weight: 700; margin: 4px 0 16px; }
+.section-divider { padding-top: 22px; border-top: 1px solid var(--line); }
+.input-group-text { background: var(--soft); color: var(--accent); border-color: var(--line); border-radius: 10px 0 0 10px; font-weight: 650; padding-inline: 15px; }
+.input-group > .form-control { border-radius: 0 10px 10px 0; }
+.form-actions { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.btn { border-radius: 10px; font-size: 13px; font-weight: 600; padding: 11px 22px; }
+.btn-primary { --bs-btn-bg: var(--accent); --bs-btn-border-color: var(--accent); --bs-btn-hover-bg: var(--accent-dark); --bs-btn-hover-border-color: var(--accent-dark); --bs-btn-active-bg: var(--accent-dark); --bs-btn-active-border-color: var(--accent-dark); }
+.btn-outline-secondary { --bs-btn-color: var(--muted); --bs-btn-border-color: var(--line); --bs-btn-hover-bg: var(--soft); --bs-btn-hover-color: var(--ink); --bs-btn-hover-border-color: #c7c1df; }
+
+/* Trip and carriage choices still use native radio inputs. */
+.trip-toggle { padding: 4px; background: var(--soft); border-radius: 12px; gap: 4px; }
+.trip-toggle .btn { border: 0; color: var(--muted); border-radius: 9px !important; padding: 9px 24px; font-weight: 600; }
+.trip-toggle .btn-check:checked + .btn { background: #fff; color: var(--accent); box-shadow: 0 2px 6px #252c4810; }
+.choice-option { display: inline-flex; align-items: center; gap: 9px; padding: 10px 15px; margin: 0 6px 8px 0; border: 1px solid var(--line); border-radius: 10px; }
+.choice-option .form-check-input { float: none; margin: 0; }
+.choice-option:has(input:checked) { border-color: #b5a9e4; background: var(--soft); }
+
+/* Put route labels above the text, inside the border, without absolute positioning. */
+.route-field { display: flex; flex-direction: column-reverse; padding: 9px 13px; border: 1px solid var(--line); border-radius: 11px; background: #fcfcfe; }
+.route-field.form-floating > label { position: static; height: auto; padding: 0; border: 0; font-size: 11px; }
+.route-field.form-floating > .form-control { height: auto; min-height: 0; padding: 3px 0 0; border: 0; border-radius: 0; background: transparent; font-size: 16px; }
+.route-field.form-floating > .form-control ~ label { transform: none; color: var(--muted); }
+.route-field.form-floating > label::after { content: none; }
+.route-field.form-floating > .form-control::placeholder { color: #777e91; }
+.route-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px #6554c016; }
+.route-field .form-control:focus { box-shadow: none; }
+
+/* Native validation: no error messages on the first page load. */
+input:user-invalid, select:user-invalid, textarea:user-invalid { border-color: #dc3545; }
+input:user-invalid ~ .invalid-feedback,
+select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback,
+.experience-group:has(input:user-invalid) > .invalid-feedback { display: block; }
+:focus-visible, .btn-check:focus-visible + .btn { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* Compact overview page. */
+.task-card { display: flex; flex-direction: column; height: 100%; border: 1px solid var(--line); border-radius: 18px; background: white; padding: 26px; text-decoration: none; color: var(--ink); }
+.task-card:hover { border-color: #b5a9e4; background: #fdfcff; }
+.task-number { color: var(--accent); font-size: 11px; font-weight: 700; margin-bottom: 26px; }
+.task-card h2 { font-size: 19px; font-weight: 650; margin-bottom: 12px; }
+.task-card p { color: var(--muted); line-height: 1.7; font-size: 12px; }
+.task-arrow { color: var(--accent); font-size: 12px; font-weight: 600; margin-top: auto; padding-top: 20px; }
+
+@media (max-width: 767px) {
+  .page-nav { margin-bottom: 18px; }
+  .ticket-header, .ticket-form, .form-panel { padding: 24px 20px; }
+  .ticket, .form-panel { border-radius: 17px; }
+  .trip-toggle { display: flex; }
+  .trip-toggle .btn { padding-inline: 14px; }
+  .form-control, .form-select { font-size: 16px; }
+  .choice-option { padding: 9px 11px; gap: 7px; font-size: 12px; }
+  .page-footer { font-size: 10px; }
+}

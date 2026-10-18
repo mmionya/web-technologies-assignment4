@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve a table</title>
+  <link rel="stylesheet" href="assets/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+  <main id="main" class="container page-shell py-4 py-md-5">
+    <nav class="page-nav"><a href="index.html"><span aria-hidden="true">←</span> All assignments</a><span>Task 03</span></nav>
+    <header class="page-heading">
+      <p class="eyebrow">TABLE RESERVATION</p>
+      <h1 id="reservation-title">Reserve a table</h1>
+      <p id="required-note">Make time for a good meal. Fields marked * are required.</p>
+    </header>
+
+    <form action="/submit" method="post" class="form-panel" aria-describedby="required-note">
+      <div class="row g-3">
+        <div class="col-12"><h2 class="section-title">Your details</h2></div>
+        <div class="col-md-6">
+          <label for="guest-name" class="form-label">Your name <span aria-hidden="true">*</span></label>
+          <input class="form-control" id="guest-name" name="full_name" type="text" autocomplete="name" required>
+        </div>
+        <div class="col-md-6">
+          <label for="guest-email" class="form-label">Email <span aria-hidden="true">*</span></label>
+          <input class="form-control" id="guest-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="col-md-6">
+          <label for="guest-phone" class="form-label">Phone <span aria-hidden="true">*</span></label>
+          <input class="form-control" id="guest-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-hint" required>
+          <div class="form-text" id="phone-hint">Include your country code.</div>
+        </div>
+        <div class="col-md-6">
+          <label for="guests" class="form-label">Guests <span aria-hidden="true">*</span></label>
+          <input class="form-control" id="guests" name="guests" type="number" min="1" step="1" inputmode="numeric" required>
+        </div>
+        <div class="col-12"><h2 class="section-title">Your visit</h2></div>
+        <div class="col-md-6">
+          <label for="reservation-date" class="form-label">Date <span aria-hidden="true">*</span></label>
+          <input class="form-control" id="reservation-date" name="date" type="date" required>
+        </div>
+        <div class="col-md-6">
+          <label for="meal" class="form-label">Meal <span aria-hidden="true">*</span></label>
+          <select class="form-select" id="meal" name="meal" required>
+            <option value="" selected disabled>Choose lunch or dinner</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select>
+        </div>
+        <div class="col-12">
+          <fieldset>
+            <legend class="form-label">Seating <span aria-hidden="true">*</span></legend>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="seating-inside" name="seating" type="radio" value="inside" required>
+              <label class="form-check-label" for="seating-inside">Inside</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" id="seating-terrace" name="seating" type="radio" value="terrace" required>
+              <label class="form-check-label" for="seating-terrace">Terrace</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-12">
+          <label for="comments" class="form-label">Comments (optional)</label>
+          <textarea class="form-control" id="comments" name="comments" rows="3" aria-describedby="comments-hint"></textarea>
+          <div class="form-text" id="comments-hint">Add any seating preferences or special requests.</div>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" id="terms" name="terms" type="checkbox" value="accepted" aria-describedby="terms-hint" required>
+            <label class="form-check-label" for="terms">I agree to the terms <span aria-hidden="true">*</span></label>
+            <div class="form-text" id="terms-hint">This is a practice form and does not confirm a booking.</div>
+          </div>
+        </div>
+        <div class="col-12 form-actions">
+          <button class="btn btn-primary" type="submit">Reserve a table</button>
+        </div>
+      </div>
+    </form>
+    <p class="small mt-4 text-secondary">Assignment 4 · Task 3 · Zhumazhan Miras · IT-2512</p>
+  </main>
+</body>
+</html>

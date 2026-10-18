@@ -1,0 +1,1309 @@
+{
+  "checks": [
+    {
+      "name": "task1.html: no script, inline event handlers, novalidate or pattern",
+      "passed": true
+    },
+    {
+      "name": "task1.html: every field has a connected label",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "task1.html: IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "task1.html: no horizontal overflow at 375px",
+      "passed": true
+    },
+    {
+      "name": "task1.html: no horizontal overflow at 1280px",
+      "passed": true
+    },
+    {
+      "name": "task2.html: no script, inline event handlers, novalidate or pattern",
+      "passed": true
+    },
+    {
+      "name": "task2.html: every field has a connected label",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "task2.html: IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "task2.html: no horizontal overflow at 375px",
+      "passed": true
+    },
+    {
+      "name": "task2.html: no horizontal overflow at 1280px",
+      "passed": true
+    },
+    {
+      "name": "task3.html: no script, inline event handlers, novalidate or pattern",
+      "passed": true
+    },
+    {
+      "name": "task3.html: every field has a connected label",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "task3.html: IDs are unique",
+      "passed": true
+    },
+    {
+      "name": "task3.html: no horizontal overflow at 375px",
+      "passed": true
+    },
+    {
+      "name": "task3.html: no horizontal overflow at 1280px",
+      "passed": true
+    },
+    {
+      "name": "Task 1: mandatory fields have required",
+      "passed": true
+    },
+    {
+      "name": "Task 1: passengers options are empty or 1–6",
+      "passed": true
+    },
+    {
+      "name": "Task 1: HTML button order is Clear then Find trains",
+      "passed": true
+    },
+    {
+      "name": "Task 1: visual button order at 375px",
+      "passed": true,
+      "detail": {
+        "clear": {
+          "x": 33,
+          "y": 1294.6875,
+          "width": 309,
+          "height": 43.5
+        },
+        "find": {
+          "x": 33,
+          "y": 1243.1875,
+          "width": 309,
+          "height": 43.5
+        }
+      }
+    },
+    {
+      "name": "Task 1: visual button order at 1280px",
+      "passed": true,
+      "detail": {
+        "clear": {
+          "x": 897.515625,
+          "y": 930.1875,
+          "width": 84.34375,
+          "height": 43.5
+        },
+        "find": {
+          "x": 989.859375,
+          "y": 930.1875,
+          "width": 121.140625,
+          "height": 43.5
+        }
+      }
+    },
+    {
+      "name": "Task 1: completed form is valid",
+      "passed": true
+    },
+    {
+      "name": "Task 1: Clear empties all visible fields and choices",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "Task 1: hidden country prefix remains +7",
+      "passed": true
+    },
+    {
+      "name": "Task 1: every field works with the keyboard only",
+      "passed": true,
+      "detail": [
+        {
+          "id": "one-way",
+          "reached_by_tab": true
+        },
+        {
+          "id": "from",
+          "reached_by_tab": true
+        },
+        {
+          "id": "to",
+          "reached_by_tab": true
+        },
+        {
+          "id": "departure",
+          "reached_by_tab": true
+        },
+        {
+          "id": "return",
+          "reached_by_tab": true
+        },
+        {
+          "id": "passengers",
+          "reached_by_tab": true
+        },
+        {
+          "id": "coupe",
+          "reached_by_tab": true
+        },
+        {
+          "id": "phone",
+          "reached_by_tab": true
+        },
+        {
+          "id": "email",
+          "reached_by_tab": true
+        },
+        {
+          "id": "sms",
+          "reached_by_tab": true
+        },
+        {
+          "id": "agreement",
+          "reached_by_tab": true
+        }
+      ]
+    },
+    {
+      "name": "Task 1: keyboard-completed form is valid",
+      "passed": true
+    },
+    {
+      "name": "Task 1: Find trains is keyboard reachable after Clear",
+      "passed": true
+    },
+    {
+      "name": "Task 1: Enter submits valid form",
+      "passed": true
+    },
+    {
+      "name": "Task 2: no feedback visible on initial load",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "name": "Task 2: no :user-invalid field on initial load",
+      "passed": true
+    },
+    {
+      "name": "Task 2: every table, boundary and required case matches",
+      "passed": true,
+      "detail": {
+        "cases": 64,
+        "failed": []
+      }
+    },
+    {
+      "name": "Task 2: typing cannot exceed full-name maxlength=40",
+      "passed": true
+    },
+    {
+      "name": "Task 2: typing cannot exceed password maxlength=20",
+      "passed": true
+    },
+    {
+      "name": "Task 2: typing cannot exceed motivation maxlength=300",
+      "passed": true
+    },
+    {
+      "name": "Task 2: edited invalid name has visible text and red border",
+      "passed": true
+    },
+    {
+      "name": "Task 2: edited invalid time shows feedback after blur",
+      "passed": true
+    },
+    {
+      "name": "Task 2: error disappears after correcting name",
+      "passed": true
+    },
+    {
+      "name": "Task 2: completed form is valid",
+      "passed": true
+    },
+    {
+      "name": "Task 2: valid form submits to local demo",
+      "passed": true
+    },
+    {
+      "name": "Submission response never echoes sample password or email",
+      "passed": true
+    },
+    {
+      "name": "Task 3: every field is reachable and fillable using keyboard only",
+      "passed": true,
+      "detail": [
+        {
+          "id": "guest-name",
+          "reached_by_tab": true
+        },
+        {
+          "id": "guest-email",
+          "reached_by_tab": true
+        },
+        {
+          "id": "guest-phone",
+          "reached_by_tab": true
+        },
+        {
+          "id": "guests",
+          "reached_by_tab": true
+        },
+        {
+          "id": "reservation-date",
+          "reached_by_tab": true,
+          "value": "2026-11-21"
+        },
+        {
+          "id": "meal",
+          "reached_by_tab": true
+        },
+        {
+          "id": "seating-terrace",
+          "reached_by_tab": true,
+          "selected_with_arrow": true
+        },
+        {
+          "id": "comments",
+          "reached_by_tab": true
+        },
+        {
+          "id": "terms",
+          "reached_by_tab": true
+        }
+      ]
+    },
+    {
+      "name": "Task 3: seating radio arrows select exactly one option",
+      "passed": true
+    },
+    {
+      "name": "Task 3: keyboard-completed form is valid",
+      "passed": true
+    },
+    {
+      "name": "Task 3: all nine original field groups are serialized",
+      "passed": true,
+      "detail": {
+        "names": [
+          "comments",
+          "date",
+          "email",
+          "full_name",
+          "guests",
+          "meal",
+          "phone",
+          "seating",
+          "terms"
+        ],
+        "seating": "terrace",
+        "meal": "lunch",
+        "date": "2026-11-21"
+      }
+    },
+    {
+      "name": "Task 3: submit button follows fields in keyboard order",
+      "passed": true
+    },
+    {
+      "name": "Task 3: Enter submits valid form",
+      "passed": true
+    }
+  ],
+  "task2_cases": [
+    {
+      "field": "Full name",
+      "id": "full-name",
+      "value": "Anna-Maria Lee",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Full name",
+      "id": "full-name",
+      "value": "A",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "tooShort"
+        ],
+        "message": "Текст должен быть не короче 2 симв. Длина текста сейчас: 1 символ."
+      }
+    },
+    {
+      "field": "University email",
+      "id": "university-email",
+      "value": "a.fedenko@astanait.edu.kz",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "University email",
+      "id": "university-email",
+      "value": "a.fedenko",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "typeMismatch"
+        ],
+        "message": "Адрес электронной почты должен содержать символ \"@\". В адресе \"a.fedenko\" отсутствует символ \"@\"."
+      }
+    },
+    {
+      "field": "University email",
+      "id": "university-email",
+      "value": "a.fedenko@",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "typeMismatch"
+        ],
+        "message": "Введите часть адреса после символа \"@\". Адрес \"a.fedenko@\" неполный."
+      }
+    },
+    {
+      "field": "Age",
+      "id": "age",
+      "value": "18",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Age",
+      "id": "age",
+      "value": "15",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeUnderflow"
+        ],
+        "message": "Значение должно быть больше или равно 16."
+      }
+    },
+    {
+      "field": "Age",
+      "id": "age",
+      "value": "31",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeOverflow"
+        ],
+        "message": "Значение должно быть меньше или равно 30."
+      }
+    },
+    {
+      "field": "Team size",
+      "id": "team-size",
+      "value": "4",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Team size",
+      "id": "team-size",
+      "value": "5",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeOverflow"
+        ],
+        "message": "Значение должно быть меньше или равно 4."
+      }
+    },
+    {
+      "field": "Team size",
+      "id": "team-size",
+      "value": "2.5",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "stepMismatch"
+        ],
+        "message": "Введите допустимое значение. Ближайшие допустимые значения: 2 и 3."
+      }
+    },
+    {
+      "field": "Track",
+      "id": "track",
+      "value": "web",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Track",
+      "id": "track",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Выберите один из пунктов списка."
+      }
+    },
+    {
+      "field": "Arrival day",
+      "id": "arrival-day",
+      "value": "2026-11-21",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Arrival day",
+      "id": "arrival-day",
+      "value": "2026-11-25",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeOverflow"
+        ],
+        "message": "Максимальное значение должно быть 22.11.2026."
+      }
+    },
+    {
+      "field": "Check-in time",
+      "id": "check-in-time",
+      "value": "10:30",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Check-in time",
+      "id": "check-in-time",
+      "value": "10:15",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "stepMismatch"
+        ],
+        "message": "Введите допустимое значение. Ближайшие допустимые значения: 10:00 и 10:30."
+      }
+    },
+    {
+      "field": "Check-in time",
+      "id": "check-in-time",
+      "value": "19:00",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeOverflow"
+        ],
+        "message": "Максимальное значение должно быть 18:00."
+      }
+    },
+    {
+      "field": "Entry fee",
+      "id": "entry-fee",
+      "value": "1500",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Entry fee",
+      "id": "entry-fee",
+      "value": "1250",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "stepMismatch"
+        ],
+        "message": "Введите допустимое значение. Ближайшие допустимые значения: 1000 и 1500."
+      }
+    },
+    {
+      "field": "Entry fee",
+      "id": "entry-fee",
+      "value": "6000",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeOverflow"
+        ],
+        "message": "Значение должно быть меньше или равно 5000."
+      }
+    },
+    {
+      "field": "Experience",
+      "id": "experience-beginner",
+      "value": true,
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Experience",
+      "id": "experience-beginner",
+      "value": false,
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Выберите один из вариантов."
+      }
+    },
+    {
+      "field": "GitHub profile",
+      "id": "github-profile",
+      "value": "",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "GitHub profile",
+      "id": "github-profile",
+      "value": "https://github.com/yerassyl-dev",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "GitHub profile",
+      "id": "github-profile",
+      "value": "github.com/yerassyl-dev",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "typeMismatch"
+        ],
+        "message": "Введите URL."
+      }
+    },
+    {
+      "field": "Password",
+      "id": "password",
+      "value": "Astana2026",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Password",
+      "id": "password",
+      "value": "short",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "tooShort"
+        ],
+        "message": "Минимально допустимое количество символов: 8. Длина текста сейчас: 5."
+      }
+    },
+    {
+      "field": "Motivation",
+      "id": "motivation",
+      "value": "120 characters",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Motivation",
+      "id": "motivation",
+      "value": "49 characters",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "tooShort"
+        ],
+        "message": "Минимально допустимое количество символов: 50. Длина текста сейчас: 49."
+      }
+    },
+    {
+      "field": "Rules agreement",
+      "id": "rules-agreement",
+      "value": true,
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Rules agreement",
+      "id": "rules-agreement",
+      "value": false,
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "table",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Чтобы продолжить, установите этот флажок."
+      }
+    },
+    {
+      "field": "Full name",
+      "id": "full-name",
+      "value": "AB",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Full name",
+      "id": "full-name",
+      "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Age",
+      "id": "age",
+      "value": "16",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Age",
+      "id": "age",
+      "value": "30",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Age",
+      "id": "age",
+      "value": "18.5",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "stepMismatch"
+        ],
+        "message": "Введите допустимое значение. Ближайшие допустимые значения: 18 и 19."
+      }
+    },
+    {
+      "field": "Team size",
+      "id": "team-size",
+      "value": "1",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Team size",
+      "id": "team-size",
+      "value": "0",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeUnderflow"
+        ],
+        "message": "Значение должно быть больше или равно 1."
+      }
+    },
+    {
+      "field": "Arrival day",
+      "id": "arrival-day",
+      "value": "2026-11-20",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Arrival day",
+      "id": "arrival-day",
+      "value": "2026-11-22",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Arrival day",
+      "id": "arrival-day",
+      "value": "2026-11-19",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeUnderflow"
+        ],
+        "message": "Минимальное значение должно быть 20.11.2026."
+      }
+    },
+    {
+      "field": "Check-in time",
+      "id": "check-in-time",
+      "value": "09:00",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Check-in time",
+      "id": "check-in-time",
+      "value": "18:00",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Check-in time",
+      "id": "check-in-time",
+      "value": "08:30",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeUnderflow"
+        ],
+        "message": "Минимальное значение должно быть 09:00."
+      }
+    },
+    {
+      "field": "Entry fee",
+      "id": "entry-fee",
+      "value": "0",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Entry fee",
+      "id": "entry-fee",
+      "value": "5000",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Entry fee",
+      "id": "entry-fee",
+      "value": "-500",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "rangeUnderflow"
+        ],
+        "message": "Значение должно быть больше или равно 0."
+      }
+    },
+    {
+      "field": "Password",
+      "id": "password",
+      "value": "AAAAAAAA",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Password",
+      "id": "password",
+      "value": "AAAAAAAAAAAAAAAAAAAA",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Motivation",
+      "id": "motivation",
+      "value": "50 characters",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "Motivation",
+      "id": "motivation",
+      "value": "300 characters",
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true,
+      "category": "boundary",
+      "validity": {
+        "valid": true,
+        "flags": [],
+        "message": ""
+      }
+    },
+    {
+      "field": "full-name",
+      "id": "full-name",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "university-email",
+      "id": "university-email",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "age",
+      "id": "age",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "team-size",
+      "id": "team-size",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "track",
+      "id": "track",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Выберите один из пунктов списка."
+      }
+    },
+    {
+      "field": "arrival-day",
+      "id": "arrival-day",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "check-in-time",
+      "id": "check-in-time",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "entry-fee",
+      "id": "entry-fee",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "experience-beginner",
+      "id": "experience-beginner",
+      "value": false,
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Выберите один из вариантов."
+      }
+    },
+    {
+      "field": "password",
+      "id": "password",
+      "value": "",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "motivation",
+      "id": "motivation",
+      "value": "0 characters",
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Заполните это поле."
+      }
+    },
+    {
+      "field": "rules-agreement",
+      "id": "rules-agreement",
+      "value": false,
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true,
+      "category": "required",
+      "validity": {
+        "valid": false,
+        "flags": [
+          "valueMissing"
+        ],
+        "message": "Чтобы продолжить, установите этот флажок."
+      }
+    }
+  ],
+  "screenshots": [
+    "report/screenshots/index-1280.png",
+    "report/screenshots/task1-375.png",
+    "report/screenshots/task1-1280.png",
+    "report/screenshots/task2-initial-1280.png",
+    "report/screenshots/task2-form.png",
+    "report/screenshots/task2-initial-375.png",
+    "report/screenshots/task2-invalid-1280.png",
+    "report/screenshots/task2-errors-form.png",
+    "report/screenshots/task2-valid-1280.png",
+    "report/screenshots/task3-1280.png",
+    "report/screenshots/task3-form.png",
+    "report/screenshots/task3-375.png",
+    "report/screenshots/task3-keyboard-complete-1280.png"
+  ],
+  "browser": "Chromium 155.0.8059.79",
+  "tested_at_utc": "2026-10-18T13:16:36.393306+00:00",
+  "all_passed": true
+}

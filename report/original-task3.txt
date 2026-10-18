@@ -1,0 +1,21 @@
+<h2>Reserve a table</h2>
+<form>
+  <input type="text" placeholder="Your name">
+  <input type="text" placeholder="Email">
+  <label>Phone</label>
+  <input type="text" id="phone">
+  <label for="guests">Guests</label>
+  <input type="text" id="people">
+  <label for="date">Date</label>
+  <input type="text" id="date" placeholder="dd/mm/yyyy">
+  <p>Seating:</p>
+  <input type="radio" name="inside" id="date"> Inside
+  <input type="radio" name="terrace"> Terrace
+  <select>
+    <option>Lunch</option>
+    <option>Dinner</option>
+  </select>
+  <textarea placeholder="Comments"></textarea>
+  <input type="checkbox"> I agree to the terms
+  <div class="btn btn-primary">Reserve</div>
+</form>
