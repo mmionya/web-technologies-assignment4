@@ -2,57 +2,57 @@
 
 **Zhumazhan Miras · IT-2512**
 
-Три формы на HTML и Bootstrap с общим оформлением: светлый фон, тёмно-синий текст и сиреневые акценты. JavaScript не используется.
+Three HTML and Bootstrap forms with a shared design: a light background, navy text, and lavender accents. No JavaScript is used.
 
-## Какие файлы изучать
+## Project files
 
-- `task1.html` — билет на поезд.
-- `task2.html` — регистрация на хакатон.
-- `task3.html` — исправленная форма кафе.
-- `style.css` — общая палитра, оформление трёх форм, адаптивность и показ ошибок.
-- `index.html` — ссылки на задания.
+- `task1.html` — train ticket booking form.
+- `task2.html` — hackathon registration form.
+- `task3.html` — corrected cafe form.
+- `style.css` — shared colors, styling for all three forms, responsive layouts, and validation feedback.
+- `index.html` — links to the assignment tasks.
 
-Bootstrap и шрифт уже лежат в `assets/`, интернет для просмотра не нужен.
+Bootstrap and the font are included in `assets/`, so the pages can be viewed offline.
 
-## Как открыть
+## How to run
 
-Можно просто открыть `index.html` в браузере. Ввод, проверка полей и Clear работают без установки программ.
+Open `index.html` in a browser. Form inputs, validation, and the Clear button work without installing any additional software.
 
-Чтобы показать ещё и успешную отправку формы, запустите:
+To also demonstrate a successful form submission, run:
 
 ```bash
 python3 scripts/serve.py
 ```
 
-Затем откройте http://127.0.0.1:8000/. Учебный сервер показывает подтверждение. Данные не сохраняются, реальные заявки не создаются. На страницах используется только HTML и CSS.
+Then open http://127.0.0.1:8000/. The demo server displays a confirmation message. It does not store submitted data or create real bookings or registrations. The pages use only HTML and CSS.
 
-## Что объяснить на защите
+## Key points for the assignment defense
 
-1. `row` и `col-md-6` — сетка Bootstrap: два поля рядом на компьютере и одно под другим на телефоне.
-2. `label for` совпадает с `id` поля. `name` нужен для отправки значения.
-3. `required` запрещает пустое поле. `min`/`max` задают границы, `step` — шаг.
-4. Для времени `step="1800"` означает 30 минут.
-5. `minlength`/`maxlength` ограничивают длину текста. `email` и `url` проверяют формат.
-6. Radio с одинаковым `name` позволяют выбрать один вариант. `fieldset` и `legend` подписывают группу.
-7. `:user-invalid` показывает ошибки после взаимодействия с полем. При открытии страницы ошибок нет.
-8. `type="reset"` возвращает исходные значения. В первой форме они пустые, поэтому Clear очищает форму.
-9. `flex-column-reverse flex-md-row` меняет расположение кнопок на телефоне без изменения HTML.
+1. `row` and `col-md-6` form a Bootstrap grid: two fields side by side on desktop and stacked vertically on mobile.
+2. A label's `for` attribute matches the input's `id`. The `name` attribute identifies the value when the form is submitted.
+3. `required` prevents empty values. `min` and `max` set limits, while `step` defines the allowed increments.
+4. For time inputs, `step="1800"` means 30 minutes.
+5. `minlength` and `maxlength` limit text length. The `email` and `url` input types validate the format.
+6. Radio buttons with the same `name` allow one option to be selected. `fieldset` and `legend` group related controls and provide a group label.
+7. `:user-invalid` displays validation feedback after the user interacts with a field. No errors are shown when the page first opens.
+8. `type="reset"` restores the initial values. The first form starts empty, so Clear clears the form.
+9. `flex-column-reverse flex-md-row` changes the button layout on mobile without changing the HTML order.
 
-В этой версии по просьбе пользователя изменены палитра и оформление первой формы. Они отличаются от зелёно-жёлтого образца в PDF.
+In this version, the color palette and the first form's design were changed at the user's request. They differ from the green and yellow reference in the assignment PDF.
 
-Return в первой форме необязателен, как в задании. `type="tel"` сам по себе не проверяет формат номера. Email не ограничен доменом университета: задание требует корректный формат адреса.
+The Return field in the first form is optional, as specified in the assignment. `type="tel"` does not validate the phone number format by itself. Email addresses are not restricted to a university domain: the assignment requires a valid email format.
 
-## Отчёт
+## Report
 
-`output/pdf/Assignment4_Zhumazhan_Miras.pdf` — отчёт со скриншотами и таблицами. Исходники: [GitHub](https://github.com/mmionya/web-technologies-assignment4).
+`output/pdf/Assignment4_Zhumazhan_Miras.pdf` contains the report with screenshots and tables. Source code: [GitHub](https://github.com/mmionya/web-technologies-assignment4).
 
-Папки `scripts/` и `report/` содержат вспомогательные инструменты и результаты проверки. Они не подключаются к страницам. Данные для отчёта — `report/metadata.json`.
+The `scripts/` and `report/` folders contain supporting tools and validation results. These files are not loaded by the web pages. Report metadata is stored in `report/metadata.json`.
 
-## Источники
+## Sources
 
-- [Bootstrap: формы](https://getbootstrap.com/docs/5.3/forms/overview/)
+- [Bootstrap: Forms](https://getbootstrap.com/docs/5.3/forms/overview/)
 - [MDN: :user-invalid](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:user-invalid)
 - [MDN: input time](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/time)
 - [W3C Validator](https://validator.w3.org/nu/)
 
-Образцы взяты из Assignment 4.pdf. Лицензии Bootstrap и Montserrat сохранены в `assets/`.
+The reference designs come from Assignment 4.pdf. The Bootstrap and Montserrat licenses are included in `assets/`.
