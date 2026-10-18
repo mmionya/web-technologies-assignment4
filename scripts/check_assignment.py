@@ -7,6 +7,7 @@ Playwright installed. --chrome may point to another locally installed Chromium.
 
 import argparse
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -121,7 +122,7 @@ def task1(page, base):
     page.keyboard.press("ArrowRight")
     page.keyboard.press("ArrowLeft")
     sequence.append({"id": "one-way", "reached_by_tab": reached})
-    for id_, value in (("from", "Astana"), ("to", "Almaty"), ("departure", "21112026"), ("return", "22112026")):
+    for id_, value in (("from", "Astana"), ("to", "Almaty"), ("departure", "11212026"), ("return", "11222026")):
         reached = tab_until(page, id_)
         page.keyboard.type(value)
         sequence.append({"id": id_, "reached_by_tab": reached})
@@ -141,7 +142,7 @@ def task1(page, base):
         page.keyboard.press("Space")
         sequence.append({"id": id_, "reached_by_tab": reached})
     check("Task 1: every field works with the keyboard only", all(s["reached_by_tab"] for s in sequence), sequence)
-    check("Task 1: keyboard-completed form is valid", page.locator("form").evaluate("f=>f.checkValidity()"))
+    check("Task 1: keyboard-completed form is valid", page.locator("form").evaluate("f=>f.checkValidity()") and page.locator("#departure").input_value() == "2026-11-21" and page.locator("#return").input_value() == "2026-11-22")
     page.keyboard.press("Tab")
     page.keyboard.press("Tab")
     check("Task 1: Find trains is keyboard reachable after Clear", page.evaluate("document.activeElement.type==='submit'"))
@@ -261,8 +262,8 @@ def task3(page, base):
         sequence.append({"id": id_, "reached_by_tab": reached})
         page.keyboard.type(value)
     reached = tab_until(page, "reservation-date")
-    # The installed Chrome uses the host's day-month-year native date widget.
-    page.keyboard.type("21112026")
+    # Chrome is explicitly launched in en-US, so the native date widget is MDY.
+    page.keyboard.type("11212026")
     sequence.append({"id": "reservation-date", "reached_by_tab": reached, "value": page.locator("#reservation-date").input_value()})
     reached = tab_until(page, "meal")
     page.keyboard.press("ArrowDown")
@@ -279,7 +280,7 @@ def task3(page, base):
     sequence.append({"id": "terms", "reached_by_tab": reached})
     check("Task 3: every field is reachable and fillable using keyboard only", all(s["reached_by_tab"] for s in sequence), sequence)
     check("Task 3: seating radio arrows select exactly one option", page.locator('[name="seating"]:checked').count() == 1 and page.locator("#seating-terrace").is_checked())
-    check("Task 3: keyboard-completed form is valid", page.locator("form").evaluate("f=>f.checkValidity()"))
+    check("Task 3: keyboard-completed form is valid", page.locator("form").evaluate("f=>f.checkValidity()") and page.locator("#reservation-date").input_value() == "2026-11-21")
     form_data = page.locator("form").evaluate("f=>Object.fromEntries(new FormData(f))")
     expected_names = {"full_name", "email", "phone", "guests", "date", "seating", "meal", "comments", "terms"}
     check("Task 3: all nine original field groups are serialized", set(form_data) == expected_names, {"names": sorted(form_data), "seating": form_data.get("seating"), "meal": form_data.get("meal"), "date": form_data.get("date")})
@@ -299,8 +300,16 @@ def main():
     args = parser.parse_args()
     SHOTS.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
-        browser = p.chromium.launch(executable_path=args.chrome, headless=True, args=["--no-sandbox"])
+        # Context locale alone does not translate Chrome's native controls and
+        # validation messages. Set the browser UI language independently of the host.
+        browser = p.chromium.launch(
+            executable_path=args.chrome,
+            headless=True,
+            args=["--no-sandbox", "--lang=en-US"],
+            env={**os.environ, "LANG": "en_US.UTF-8", "LANGUAGE": "en_US:en", "LC_ALL": "en_US.UTF-8"},
+        )
         results["browser"] = f"Chromium {browser.version}"
+        results["locale"] = "en-US"
         results["tested_at_utc"] = datetime.now(timezone.utc).isoformat()
         page = browser.new_page(viewport={"width": 1280, "height": 1000}, locale="en-US")
         for name in ("task1.html", "task2.html", "task3.html"):

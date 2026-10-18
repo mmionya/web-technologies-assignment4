@@ -348,7 +348,7 @@
         "flags": [
           "tooShort"
         ],
-        "message": "Текст должен быть не короче 2 симв. Длина текста сейчас: 1 символ."
+        "message": "Please lengthen this text to 2 characters or more (you are currently using 1 character)."
       }
     },
     {
@@ -378,7 +378,7 @@
         "flags": [
           "typeMismatch"
         ],
-        "message": "Адрес электронной почты должен содержать символ \"@\". В адресе \"a.fedenko\" отсутствует символ \"@\"."
+        "message": "Please include an '@' in the email address. 'a.fedenko' is missing an '@'."
       }
     },
     {
@@ -394,7 +394,7 @@
         "flags": [
           "typeMismatch"
         ],
-        "message": "Введите часть адреса после символа \"@\". Адрес \"a.fedenko@\" неполный."
+        "message": "Please enter a part following '@'. 'a.fedenko@' is incomplete."
       }
     },
     {
@@ -424,7 +424,7 @@
         "flags": [
           "rangeUnderflow"
         ],
-        "message": "Значение должно быть больше или равно 16."
+        "message": "Value must be greater than or equal to 16."
       }
     },
     {
@@ -440,7 +440,7 @@
         "flags": [
           "rangeOverflow"
         ],
-        "message": "Значение должно быть меньше или равно 30."
+        "message": "Value must be less than or equal to 30."
       }
     },
     {
@@ -470,7 +470,7 @@
         "flags": [
           "rangeOverflow"
         ],
-        "message": "Значение должно быть меньше или равно 4."
+        "message": "Value must be less than or equal to 4."
       }
     },
     {
@@ -486,7 +486,7 @@
         "flags": [
           "stepMismatch"
         ],
-        "message": "Введите допустимое значение. Ближайшие допустимые значения: 2 и 3."
+        "message": "Please enter a valid value. The two nearest valid values are 2 and 3."
       }
     },
     {
@@ -516,7 +516,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Выберите один из пунктов списка."
+        "message": "Please select an item in the list."
       }
     },
     {
@@ -546,7 +546,7 @@
         "flags": [
           "rangeOverflow"
         ],
-        "message": "Максимальное значение должно быть 22.11.2026."
+        "message": "Value must be 11/22/2026 or earlier."
       }
     },
     {
@@ -576,7 +576,7 @@
         "flags": [
           "stepMismatch"
         ],
-        "message": "Введите допустимое значение. Ближайшие допустимые значения: 10:00 и 10:30."
+        "message": "Please enter a valid value. The two nearest valid values are 10:00 AM and 10:30 AM."
       }
     },
     {
@@ -592,7 +592,7 @@
         "flags": [
           "rangeOverflow"
         ],
-        "message": "Максимальное значение должно быть 18:00."
+        "message": "Value must be 6:00 PM or earlier."
       }
     },
     {
@@ -622,7 +622,7 @@
         "flags": [
           "stepMismatch"
         ],
-        "message": "Введите допустимое значение. Ближайшие допустимые значения: 1000 и 1500."
+        "message": "Please enter a valid value. The two nearest valid values are 1000 and 1500."
       }
     },
     {
@@ -638,7 +638,7 @@
         "flags": [
           "rangeOverflow"
         ],
-        "message": "Значение должно быть меньше или равно 5000."
+        "message": "Value must be less than or equal to 5000."
       }
     },
     {
@@ -668,7 +668,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Выберите один из вариантов."
+        "message": "Please select one of these options."
       }
     },
     {
@@ -712,7 +712,7 @@
         "flags": [
           "typeMismatch"
         ],
-        "message": "Введите URL."
+        "message": "Please enter a URL."
       }
     },
     {
@@ -742,7 +742,7 @@
         "flags": [
           "tooShort"
         ],
-        "message": "Минимально допустимое количество символов: 8. Длина текста сейчас: 5."
+        "message": "Please lengthen this text to 8 characters or more (you are currently using 5 characters)."
       }
     },
     {
@@ -772,7 +772,7 @@
         "flags": [
           "tooShort"
         ],
-        "message": "Минимально допустимое количество символов: 50. Длина текста сейчас: 49."
+        "message": "Please lengthen this text to 50 characters or more (you are currently using 49 characters)."
       }
     },
     {
@@ -802,7 +802,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Чтобы продолжить, установите этот флажок."
+        "message": "Please check this box if you want to proceed."
       }
     },
     {
@@ -874,7 +874,7 @@
         "flags": [
           "stepMismatch"
         ],
-        "message": "Введите допустимое значение. Ближайшие допустимые значения: 18 и 19."
+        "message": "Please enter a valid value. The two nearest valid values are 18 and 19."
       }
     },
     {
@@ -904,7 +904,7 @@
         "flags": [
           "rangeUnderflow"
         ],
-        "message": "Значение должно быть больше или равно 1."
+        "message": "Value must be greater than or equal to 1."
       }
     },
     {
@@ -948,7 +948,7 @@
         "flags": [
           "rangeUnderflow"
         ],
-        "message": "Минимальное значение должно быть 20.11.2026."
+        "message": "Value must be 11/20/2026 or later."
       }
     },
     {
@@ -992,7 +992,7 @@
         "flags": [
           "rangeUnderflow"
         ],
-        "message": "Минимальное значение должно быть 09:00."
+        "message": "Value must be 9:00 AM or later."
       }
     },
     {
@@ -1036,7 +1036,7 @@
         "flags": [
           "rangeUnderflow"
         ],
-        "message": "Значение должно быть больше или равно 0."
+        "message": "Value must be greater than or equal to 0."
       }
     },
     {
@@ -1108,7 +1108,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1124,7 +1124,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1140,7 +1140,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1156,7 +1156,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1172,7 +1172,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Выберите один из пунктов списка."
+        "message": "Please select an item in the list."
       }
     },
     {
@@ -1188,7 +1188,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1204,7 +1204,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1220,7 +1220,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1236,7 +1236,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Выберите один из вариантов."
+        "message": "Please select one of these options."
       }
     },
     {
@@ -1252,7 +1252,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1268,7 +1268,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Заполните это поле."
+        "message": "Please fill out this field."
       }
     },
     {
@@ -1284,7 +1284,7 @@
         "flags": [
           "valueMissing"
         ],
-        "message": "Чтобы продолжить, установите этот флажок."
+        "message": "Please check this box if you want to proceed."
       }
     }
   ],
@@ -1304,6 +1304,7 @@
     "report/screenshots/task3-keyboard-complete-1280.png"
   ],
   "browser": "Chromium 155.0.8059.79",
-  "tested_at_utc": "2026-10-18T13:16:36.393306+00:00",
+  "locale": "en-US",
+  "tested_at_utc": "2026-10-18T13:35:36.394574+00:00",
   "all_passed": true
 }
