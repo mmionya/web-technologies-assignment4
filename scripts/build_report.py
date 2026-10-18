@@ -101,10 +101,14 @@ def newpage(template='portrait'):
     story.extend([NextPageTemplate(template), PageBreak()])
 repository = META['repository']
 repo_text = f'<link href="{escape(repository, quote=True)}" color="#6554C0">{literal(repository)}</link>' if repository else 'GitHub: ссылка пока не предоставлена.'
+live_site = META['live_site']
+site_text = f'<link href="{escape(live_site, quote=True)}" color="#6554C0">{literal(live_site)}</link>'
 
 story += [p('Assignment 4. Forms and Validation', 'HeadRu'),
           p(f'{literal(META["student"])} · {literal(META["group"])} · {META["date"]}', 'BodyRu'),
-          p(repo_text, 'SmallRu'), p('Task 1. Билет на поезд - 1280 px', 'SubRu')]
+          p('GitHub: ' + repo_text, 'SmallRu'),
+          p('GitHub Pages: ' + site_text, 'SmallRu'),
+          p('Task 1. Билет на поезд - 1280 px', 'SubRu')]
 comparison = Table([[p('Образец из задания', 'CaptionRu'),p('Моя страница · 1280 px', 'CaptionRu')],
                     [pic('reference-desktop.png',365,290),pic('task1-1280.png',365,290)]],colWidths=[384,384])
 comparison.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('ALIGN',(0,0),(-1,-1),'CENTER')]))
@@ -172,7 +176,9 @@ for item in PROBLEMS:
                   p('<b>Почему выбран текущий.</b> '+literal(item['rationale']))]
 story += [p('Вывод', 'SubRu'),p('В этой работе я разобрал, как строить форму с сеткой Bootstrap, проверять данные HTML-атрибутами и связывать поля с подписями. Основные правила находятся прямо в HTML, а CSS отвечает за оформление и показ ошибок.'),
           p('Проверки и запуск', 'SubRu'),p(f'Пройдены {len(RESULTS["checks"])} функциональных проверок и {len(RESULTS["task2_cases"])} проверок значений. JavaScript, pattern и novalidate на страницах отсутствуют. Открыть формы можно через index.html. Для демонстрации отправки: python3 scripts/serve.py, затем http://127.0.0.1:8000/.', 'SmallRu'),
-          p('GitHub', 'SubRu'),p(repo_text, 'SmallRu'),p('Источники', 'SubRu')]
+          p('GitHub', 'SubRu'),p(repo_text, 'SmallRu'),
+          p('GitHub Pages', 'SubRu'),p(site_text, 'SmallRu'),
+          p('Источники', 'SubRu')]
 for label,url in [
     ('Bootstrap: формы','https://getbootstrap.com/docs/5.3/forms/overview/'),
     ('MDN: :user-invalid','https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:user-invalid'),
