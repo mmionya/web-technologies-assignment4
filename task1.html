@@ -8,16 +8,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="app-page train-page">
-  <main class="container page-shell py-4 py-md-5">
-    <nav class="page-nav" aria-label="Page navigation">
-      <a class="brand" href="index.html">railway<span>.</span></a>
-      <a href="index.html">All assignments <span aria-hidden="true">↗</span></a>
-    </nav>
+  <main class="container page-shell">
     <div class="ticket">
       <header class="ticket-header">
-        <p class="eyebrow">A NEW JOURNEY</p>
         <h1>Book a train ticket</h1>
-        <p class="heading-note">Choose your route and make yourself comfortable.</p>
       </header>
       <form class="ticket-form" action="/submit" method="post">
         <!-- Two radio inputs form one trip choice. -->
@@ -31,7 +25,6 @@
           </div>
         </fieldset>
 
-        <h2 class="section-title">Route &amp; dates</h2>
         <!-- Bootstrap columns stack on phones. -->
         <div class="row g-3 mb-4">
           <div class="col-md-6">
@@ -70,21 +63,20 @@
 
         <fieldset class="mb-4 carriage-choices">
           <legend class="form-label">Carriage class</legend>
-          <div class="form-check form-check-inline choice-option">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" id="seat" name="carriage" value="seat" required>
             <label class="form-check-label" for="seat">Seat</label>
           </div>
-          <div class="form-check form-check-inline choice-option">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" id="coupe" name="carriage" value="coupe" required>
             <label class="form-check-label" for="coupe">Coupé</label>
           </div>
-          <div class="form-check form-check-inline choice-option">
+          <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" id="sleeper" name="carriage" value="sleeper" required>
             <label class="form-check-label" for="sleeper">Sleeper</label>
           </div>
         </fieldset>
 
-        <h2 class="section-title section-divider">Contact details</h2>
         <div class="row g-3 mb-4">
           <div class="col-md-6">
             <label class="form-label" for="phone">Phone</label>
@@ -114,7 +106,7 @@
         </div>
       </form>
     </div>
-    <p class="page-footer">Assignment 4 · Zhumazhan Miras · IT-2512</p>
+    <p class="page-footer"><a href="index.html">All tasks</a></p>
   </main>
 </body>
 </html>

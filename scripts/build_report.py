@@ -109,7 +109,7 @@ story += [p('Assignment 4. Forms and Validation', 'HeadEn'),
 comparison = Table([[p('Assignment reference', 'CaptionEn'),p('My page · 1280 px', 'CaptionEn')],
                     [pic('reference-desktop.png',249,290),pic('task1-1280.png',249,290)]],colWidths=[261,261])
 comparison.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('ALIGN',(0,0),(-1,-1),'CENTER')]))
-story += [comparison,Spacer(1,8),p('The form uses the Bootstrap grid, radio buttons, a select menu, an input group, a switch, and a checkbox. The custom navy and lavender palette uses #252C48, #6554C0, #F0EDF9, and #F6F5FA. The colors and layout differ from the reference by design; Montserrat and the Bootstrap components are retained. For comparison, One way, Coupé, and 1 adult are selected, and the route is entered manually.', 'SmallEn')]
+story += [comparison,Spacer(1,8),p('The form uses the Bootstrap grid, radio buttons, a select menu, an input group, a switch, and a checkbox. It follows the reference palette: #0F6B5F, #F2A93B, #16302B, #F4F7F5, and #E6EFEC. Montserrat, a green header, a yellow Find trains button, rounded controls, and a card shadow reproduce the main visual details. For comparison, One way, Coupé, and 1 adult are selected, and the route is entered manually.', 'SmallEn')]
 
 newpage()
 story += [p('Task 1. Mobile layout - 375 px', 'HeadEn')]

@@ -2,7 +2,7 @@
 
 **Zhumazhan Miras · IT-2512**
 
-Three HTML and Bootstrap forms with a shared design: a light background, navy text, and lavender accents. No JavaScript is used.
+Three HTML and Bootstrap forms. The train ticket form follows the assignment's green and yellow reference; the registration and cafe forms use navy text and lavender accents. No JavaScript is used.
 
 ## Live demo
 
@@ -46,7 +46,7 @@ Then open http://127.0.0.1:8000/. The demo server displays a confirmation messag
 8. `type="reset"` restores the initial values. The first form starts empty, so Clear clears the form.
 9. `flex-column-reverse flex-md-row` changes the button layout on mobile without changing the HTML order.
 
-In this version, the color palette and the first form's design were changed at the user's request. They differ from the green and yellow reference in the assignment PDF.
+The train ticket form uses the reference palette: `#0F6B5F`, `#F2A93B`, `#16302B`, `#F4F7F5`, and `#E6EFEC`. Its layout, Montserrat font, rounded controls, card shadow, and mobile button order follow the assignment design.
 
 The Return field in the first form is optional, as specified in the assignment. `type="tel"` does not validate the phone number format by itself. Email addresses are not restricted to a university domain: the assignment requires a valid email format.
 

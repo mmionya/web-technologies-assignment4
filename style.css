@@ -28,11 +28,8 @@ h1 { font-size: clamp(25px, 3.2vw, 34px); font-weight: 700; letter-spacing: -1px
 .page-heading > p:last-child, .heading-note { color: var(--muted); line-height: 1.7; margin-bottom: 0; }
 .page-footer { margin: 20px 0 0; color: var(--muted); text-align: center; font-size: 11px; }
 
-/* One card and one set of controls for all three forms. */
-.ticket, .form-panel { border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 12px 36px #252c4808; }
-.ticket { overflow: hidden; }
-.ticket-header { padding: 30px 36px 26px; border-bottom: 1px solid var(--line); background: linear-gradient(110deg, #fff, #f7f5fc); }
-.ticket-form, .form-panel { padding: 30px 36px; }
+/* Shared controls for the registration and reservation forms. */
+.form-panel { border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 12px 36px #252c4808; padding: 30px 36px; }
 .form-label { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
 legend.form-label { float: none; width: auto; }
 .form-control, .form-select { min-height: 44px; border-color: var(--line); border-radius: 10px; background-color: #fcfcfe; color: var(--ink); font-size: 14px; padding: 10px 13px; }
@@ -52,24 +49,6 @@ legend.form-label { float: none; width: auto; }
 .btn-primary { --bs-btn-bg: var(--accent); --bs-btn-border-color: var(--accent); --bs-btn-hover-bg: var(--accent-dark); --bs-btn-hover-border-color: var(--accent-dark); --bs-btn-active-bg: var(--accent-dark); --bs-btn-active-border-color: var(--accent-dark); }
 .btn-outline-secondary { --bs-btn-color: var(--muted); --bs-btn-border-color: var(--line); --bs-btn-hover-bg: var(--soft); --bs-btn-hover-color: var(--ink); --bs-btn-hover-border-color: #c7c1df; }
 
-/* Trip and carriage choices still use native radio inputs. */
-.trip-toggle { padding: 4px; background: var(--soft); border-radius: 12px; gap: 4px; }
-.trip-toggle .btn { border: 0; color: var(--muted); border-radius: 9px !important; padding: 9px 24px; font-weight: 600; }
-.trip-toggle .btn-check:checked + .btn { background: #fff; color: var(--accent); box-shadow: 0 2px 6px #252c4810; }
-.choice-option { display: inline-flex; align-items: center; gap: 9px; padding: 10px 15px; margin: 0 6px 8px 0; border: 1px solid var(--line); border-radius: 10px; }
-.choice-option .form-check-input { float: none; margin: 0; }
-.choice-option:has(input:checked) { border-color: #b5a9e4; background: var(--soft); }
-
-/* Put route labels above the text, inside the border, without absolute positioning. */
-.route-field { display: flex; flex-direction: column-reverse; padding: 9px 13px; border: 1px solid var(--line); border-radius: 11px; background: #fcfcfe; }
-.route-field.form-floating > label { position: static; height: auto; padding: 0; border: 0; font-size: 11px; }
-.route-field.form-floating > .form-control { height: auto; min-height: 0; padding: 3px 0 0; border: 0; border-radius: 0; background: transparent; font-size: 16px; }
-.route-field.form-floating > .form-control ~ label { transform: none; color: var(--muted); }
-.route-field.form-floating > label::after { content: none; }
-.route-field.form-floating > .form-control::placeholder { color: #777e91; }
-.route-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px #6554c016; }
-.route-field .form-control:focus { box-shadow: none; }
-
 /* Native validation: no error messages on the first page load. */
 input:user-invalid, select:user-invalid, textarea:user-invalid { border-color: #dc3545; }
 input:user-invalid ~ .invalid-feedback,
@@ -88,11 +67,74 @@ textarea:user-invalid ~ .invalid-feedback,
 
 @media (max-width: 767px) {
   .page-nav { margin-bottom: 18px; }
-  .ticket-header, .ticket-form, .form-panel { padding: 24px 20px; }
-  .ticket, .form-panel { border-radius: 17px; }
-  .trip-toggle { display: flex; }
-  .trip-toggle .btn { padding-inline: 14px; }
+  .form-panel { padding: 24px 20px; border-radius: 17px; }
   .form-control, .form-select { font-size: 16px; }
-  .choice-option { padding: 9px 11px; gap: 7px; font-size: 12px; }
   .page-footer { font-size: 10px; }
+}
+
+/* Task 1 follows the green-and-yellow reference in the assignment. */
+.train-page { --ink: #16302b; --accent: #0f6b5f; --line: #d5e0dc; background: #e6efec; font-size: 20px; }
+.train-page .page-shell { max-width: 1280px; padding: 32px; }
+.train-page .ticket { overflow: hidden; border-radius: 32px; background: #fff; box-shadow: 0 20px 40px #16302b18; }
+.train-page .ticket-header { padding: 36px 56px; background: var(--accent); color: #fff; }
+.train-page h1 { margin: 0; font-size: 38px; line-height: 1.25; font-weight: 700; letter-spacing: 0; }
+.train-page .ticket-form { padding: 56px 64px; }
+.train-page .ticket-form > .mb-4 { margin-bottom: 32px !important; }
+.train-page .row { --bs-gutter-x: 24px; --bs-gutter-y: 24px; }
+.train-page .form-label { font-size: 20px; margin-bottom: 12px; }
+.train-page .form-control, .train-page .form-select { min-height: 52px; padding: 10px 16px; border-radius: 14px; background-color: #f4f7f5; font-size: 20px; }
+.train-page .form-control::placeholder { color: #626b68; }
+.train-page .form-control:focus, .train-page .form-select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #0f6b5f20; }
+.train-page .form-check-input { border-color: #acbdb6; }
+.train-page .form-check-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px #0f6b5f20; }
+.train-page .carriage-choices .form-check-inline { margin-right: 24px; margin-bottom: 0; }
+.train-page .carriage-choices .form-check-inline:last-child { margin-right: 0; }
+.train-page .input-group-text { padding-inline: 18px; border-color: var(--accent); border-radius: 14px 0 0 14px; background: var(--accent); color: #fff; font-size: 20px; font-weight: 700; }
+.train-page .input-group > .form-control { border-radius: 0 14px 14px 0; }
+.train-page .form-actions { margin-top: 36px; padding-top: 0; border: 0; }
+.train-page .btn { border-radius: 100px; font-size: 20px; font-weight: 700; padding: 14px 32px; }
+.train-page .btn-primary { --bs-btn-color: #16302b; --bs-btn-bg: #f2a93b; --bs-btn-border-color: #f2a93b; --bs-btn-hover-color: #16302b; --bs-btn-hover-bg: #e99c2c; --bs-btn-hover-border-color: #e99c2c; --bs-btn-active-color: #16302b; --bs-btn-active-bg: #df9326; --bs-btn-active-border-color: #df9326; }
+.train-page .btn-outline-secondary { --bs-btn-color: #16302b; --bs-btn-border-color: #16302b; --bs-btn-hover-bg: #e6efec; --bs-btn-hover-color: #16302b; --bs-btn-hover-border-color: #16302b; --bs-btn-active-bg: #d5e0dc; --bs-btn-active-color: #16302b; --bs-btn-active-border-color: #16302b; }
+.train-page .form-actions .btn { padding-inline: 40px !important; }
+.train-page .page-footer { margin-top: 20px; text-align: left; font-size: 16px; }
+
+/* The segmented trip selector and carriage controls are native radio inputs. */
+.train-page .trip-toggle .btn { padding: 10px 30px; border: 1px solid var(--accent); border-radius: 0; color: var(--accent); background: #fff; }
+.train-page .trip-toggle .btn:first-of-type { border-radius: 100px 0 0 100px; }
+.train-page .trip-toggle .btn:last-of-type { border-radius: 0 100px 100px 0; }
+.train-page .trip-toggle .btn-check:checked + .btn { background: var(--accent); color: #fff; }
+
+/* Keep the route labels in normal flow, above the input inside its border. */
+.train-page .route-field { display: flex; flex-direction: column-reverse; padding: 10px 16px; border: 1px solid var(--line); border-radius: 14px; background: #f4f7f5; }
+.train-page .route-field.form-floating > label { position: static; height: auto; padding: 0; border: 0; font-size: 16px; }
+.train-page .route-field.form-floating > .form-control { height: auto; min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; font-size: 20px; }
+.train-page .route-field.form-floating > .form-control ~ label { transform: none; color: #687770; }
+.train-page .route-field.form-floating > label::after { content: none; }
+.train-page .route-field.form-floating > .form-control::placeholder { color: #626b68; }
+.train-page .route-field:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px #0f6b5f20; }
+.train-page .route-field .form-control:focus { box-shadow: none; }
+.train-page .route-field:has(input:user-invalid), .train-page input:user-invalid, .train-page select:user-invalid { border-color: #dc3545; }
+
+@media (max-width: 767px) {
+  .train-page { font-size: 16px; }
+  .train-page .page-shell { padding: 12px; }
+  .train-page .ticket { border-radius: 24px; }
+  .train-page .ticket-header { padding: 22px 20px; }
+  .train-page h1 { font-size: 22px; }
+  .train-page .ticket-form { padding: 24px; }
+  .train-page .ticket-form > .mb-4 { margin-bottom: 24px !important; }
+  .train-page .row { --bs-gutter-x: 16px; --bs-gutter-y: 16px; }
+  .train-page .form-label { font-size: 16px; margin-bottom: 8px; }
+  .train-page .form-control, .train-page .form-select { min-height: 40px; padding: 7px 12px; border-radius: 12px; font-size: 16px; }
+  .train-page .input-group-text { padding-inline: 12px; border-radius: 12px 0 0 12px; font-size: 16px; }
+  .train-page .input-group > .form-control { border-radius: 0 12px 12px 0; }
+  .train-page .carriage-choices .form-check-inline { margin-right: 12px; }
+  .train-page .btn { padding: 12px 20px; font-size: 16px; }
+  .train-page .trip-toggle { display: flex; }
+  .train-page .trip-toggle .btn { flex: 1; padding: 9px 12px; }
+  .train-page .route-field { padding: 8px 12px; border-radius: 12px; }
+  .train-page .route-field.form-floating > label { font-size: 14px; }
+  .train-page .route-field.form-floating > .form-control { font-size: 16px; }
+  .train-page .form-actions { margin-top: 28px; }
+  .train-page .page-footer { margin-top: 16px; font-size: 14px; }
 }
