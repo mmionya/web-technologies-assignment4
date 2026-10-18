@@ -7,12 +7,12 @@ from pathlib import Path
 from PIL import Image as PILImage
 from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER
-from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
-    BaseDocTemplate, Frame, Image, KeepTogether, NextPageTemplate,
+    BaseDocTemplate, Frame, Image,
     PageBreak, PageTemplate, Paragraph, Spacer, Table, TableStyle,
 )
 
@@ -39,7 +39,7 @@ PALE = colors.HexColor('#F0EDF9')
 styles = getSampleStyleSheet()
 styles.add(ParagraphStyle('BodyEn', fontName='Report', fontSize=9.3, leading=14.5, textColor=INK, spaceAfter=9))
 styles.add(ParagraphStyle('SmallEn', parent=styles['BodyEn'], fontSize=8, leading=11.7, spaceAfter=5))
-styles.add(ParagraphStyle('CellEn', parent=styles['BodyEn'], fontSize=7.4, leading=10.6, spaceAfter=0))
+styles.add(ParagraphStyle('CellEn', parent=styles['BodyEn'], fontSize=8.5, leading=12.5, spaceAfter=0))
 styles.add(ParagraphStyle('HeadEn', parent=styles['BodyEn'], fontName='Report-Bold', fontSize=19, leading=25, spaceAfter=13))
 styles.add(ParagraphStyle('SubEn', parent=styles['BodyEn'], fontName='Report-Bold', fontSize=11, leading=16, spaceBefore=7, spaceAfter=9))
 styles.add(ParagraphStyle('HeroEn', parent=styles['HeadEn'], fontSize=33, leading=40))
@@ -90,15 +90,12 @@ def footer(canvas, doc):
 doc = BaseDocTemplate(str(OUT), pagesize=A4, title='Assignment 4 - Zhumazhan Miras - IT-2512', author=META['student'], leftMargin=36, rightMargin=36, topMargin=42, bottomMargin=46)
 doc.addPageTemplates([
     PageTemplate(id='portrait', frames=Frame(36, 46, A4[0]-72, A4[1]-88, leftPadding=0, bottomPadding=0, rightPadding=0, topPadding=0), pagesize=A4, onPage=footer),
-    PageTemplate(id='wide', frames=Frame(36, 46, landscape(A4)[0]-72, landscape(A4)[1]-88, leftPadding=0, bottomPadding=0, rightPadding=0, topPadding=0), pagesize=landscape(A4), onPage=footer),
 ])
 
-# A shorter report: seven pages, with only the required evidence.
-doc.pagesize = landscape(A4)
-doc.pageTemplates.reverse()
+# Use portrait A4 throughout, with tables sized to the available text width.
 story = []
-def newpage(template='portrait'):
-    story.extend([NextPageTemplate(template), PageBreak()])
+def newpage():
+    story.append(PageBreak())
 repository = META['repository']
 repo_text = f'<link href="{escape(repository, quote=True)}" color="#6554C0">{literal(repository)}</link>' if repository else 'GitHub URL has not been provided.'
 live_site = META['live_site']
@@ -110,7 +107,7 @@ story += [p('Assignment 4. Forms and Validation', 'HeadEn'),
           p('GitHub Pages: ' + site_text, 'SmallEn'),
           p('Task 1. Train ticket booking - 1280 px', 'SubEn')]
 comparison = Table([[p('Assignment reference', 'CaptionEn'),p('My page · 1280 px', 'CaptionEn')],
-                    [pic('reference-desktop.png',365,290),pic('task1-1280.png',365,290)]],colWidths=[384,384])
+                    [pic('reference-desktop.png',249,290),pic('task1-1280.png',249,290)]],colWidths=[261,261])
 comparison.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('ALIGN',(0,0),(-1,-1),'CENTER')]))
 story += [comparison,Spacer(1,8),p('The form uses the Bootstrap grid, radio buttons, a select menu, an input group, a switch, and a checkbox. The custom navy and lavender palette uses #252C48, #6554C0, #F0EDF9, and #F6F5FA. The colors and layout differ from the reference by design; Montserrat and the Bootstrap components are retained. For comparison, One way, Coupé, and 1 adult are selected, and the route is entered manually.', 'SmallEn')]
 
@@ -130,7 +127,7 @@ with PILImage.open(SHOTS / 'task2-errors-form.png') as im:
     im.crop((0,75,im.width,210)).save(SHOTS / 'task2-errors-detail.png')
 story += [pic('task2-errors-detail.png',500,138)]
 
-newpage('wide')
+newpage()
 story += [p('Task 2. Validation results', 'HeadEn')]
 entries = [
  ('Full name', 'required; minlength=2; maxlength=40', 'Anna-Maria Lee', 'A'),
@@ -150,7 +147,7 @@ entries = [
 rows = [['Field','Rule','Accepted','Rejected','Result']]
 for entry in entries:
     rows.append([*(literal(t) for t in entry),'Passed'])
-story += [table(rows,[88,230,180,175,95]),Spacer(1,10),p('All values from the assignment produced the expected results. Boundary values and empty required fields were also tested. All 64 value tests passed. For time inputs, step=1800 means 30 minutes; maxlength prevents typing extra characters.', 'SmallEn')]
+story += [table(rows,[68,153,118,130,54]),Spacer(1,10),p('All values from the assignment produced the expected results. Boundary values and empty required fields were also tested. All 64 value tests passed. For time inputs, step=1800 means 30 minutes; maxlength prevents typing extra characters.', 'SmallEn')]
 
 newpage()
 story += [p('Task 3. Improved cafe reservation form', 'HeadEn'),
@@ -159,13 +156,13 @@ story += [p('Task 3. Improved cafe reservation form', 'HeadEn'),
           p('Verification', 'SubEn'),p('The form works with the keyboard: Tab moves focus, arrow keys select a radio option, Space toggles the agreement, and Enter submits the form. There is no horizontal scrolling at 375 or 1280 px.', 'BodyEn'),
           p('The official W3C Validator found no errors or warnings in task1.html, task2.html, or task3.html. The local demo handler only confirms submission; it does not create a real reservation.', 'SmallEn')]
 
-newpage('wide')
+newpage()
 story += [p('Task 3. 10 problems in the original form', 'HeadEn'),
           p('Line numbers refer to the original snippet from the assignment PDF, saved in report/original-task3.txt.', 'SmallEn')]
 rows = [['No. / lines','Original code or issue','Why it is a problem','Fix']]
 for i,item in enumerate(PROBLEMS,1):
     rows.append([f'{i}<br/>{literal(item["lines"])}',literal(item['original']),literal(item['problem']),literal(item['fix'])])
-story += [table(rows,[55,260,230,223])]
+story += [table(rows,[55,179,145,144])]
 
 newpage()
 story += [p('Alternatives and conclusion', 'HeadEn')]
