@@ -4,6 +4,14 @@
 
 Three HTML and Bootstrap forms with a shared design: a light background, navy text, and lavender accents. No JavaScript is used.
 
+## Live demo
+
+[Open the website on GitHub Pages](https://mmionya.github.io/web-technologies-assignment4/).
+
+The hosted preview supports navigation, form inputs, native HTML validation, and reset buttons. Successful form submission requires the local server described below: [GitHub Pages serves static files and does not run Python](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), so it cannot process the forms' POST requests.
+
+The site is published from the root of the `main` branch and updates automatically after each push. `.nojekyll` disables Jekyll processing.
+
 ## Project files
 
 - `task1.html` — train ticket booking form.
